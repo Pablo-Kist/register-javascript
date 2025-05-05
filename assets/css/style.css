@@ -1,0 +1,244 @@
+:root {
+  --neutral-white: #fff;
+  --neutral-black: #000;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: #ff9100;
+}
+
+.container {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background-image: url(..//images/bg.png);
+  background-repeat: no-repeat;
+  background-position: top;
+  animation: bgAnim 1.5s forwards;
+}
+
+@keyframes bgAnim {
+  0% {
+    opacity: 0.2;
+    background-position: bottom;
+  }
+
+  30% {
+    opacity: 1;
+    background-position: bottom;
+  }
+  100% {
+    opacity: 1;
+    background-position: top;
+  }
+}
+
+button {
+  padding: 0.8rem 1.6rem;
+  cursor: pointer;
+}
+
+form.form-register {
+  width: 32rem;
+}
+
+form.form-register fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 0.8rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.8rem;
+  isolation: isolate;
+  backdrop-filter: blur(20px);
+  opacity: 0;
+  animation: formAnim 4s 1s forwards;
+}
+
+@keyframes formAnim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+fieldset span.letter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 32rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: rgba(206, 103, 31, 0.6);
+  transition: opacity 0.1s;
+  filter: blur(1.2rem);
+  user-select: none;
+  z-index: -1;
+}
+
+fieldset legend {
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 600;
+  font-size: 3.2rem;
+  text-align: center;
+  padding: 0.4rem;
+  letter-spacing: -1.5px;
+  text-transform: uppercase;
+}
+
+fieldset h1 {
+  color: rgba(230, 57, 90, 0.4);
+  font-size: 1.6rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 1.6rem;
+  transition: opacity 0.2s;
+}
+
+fieldset label {
+  font-weight: 500;
+  font-size: 1.6rem;
+  color: var(--neutral-white);
+  display: block;
+  cursor: pointer;
+}
+
+input[type="text"],
+input[type="email"] {
+  border-radius: 0.8rem;
+  outline: none;
+  width: 100%;
+  height: 3.2rem;
+  padding: 0.4rem;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: var(--neutral-white);
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+input[type="text"]:focus,
+input[type="email"]:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+input[type="text"]:focus:valid,
+input[type="email"]:focus:valid {
+  border-bottom: 1px solid rgb(120, 255, 120);
+}
+input[type="text"]:focus:invalid,
+input[type="email"]:focus:invalid {
+  border-bottom: 1px solid rgb(255, 125, 125);
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder {
+  color: rgba(255, 255, 255, 0.2);
+  font-weight: 100;
+  font-size: 1.2rem;
+}
+
+div.form-password {
+  width: 100%;
+  border-radius: 0.8rem;
+  position: relative;
+  height: 3.2rem;
+  display: flex;
+}
+
+div.form-group:nth-last-of-type(1) label {
+  padding-bottom: 0.4rem;
+}
+
+div.form-group p {
+  padding-bottom: 0.4rem;
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+input[type="password"] {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.8rem;
+  padding: 0.4rem;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: var(--neutral-white);
+  font-weight: 600;
+  outline: none;
+  font-size: 1.4rem;
+}
+
+input[type="password"]:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+input[type="password"]:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+input[type="password"]:focus:valid {
+  border-bottom: 1px solid rgb(120, 255, 120);
+}
+input[type="password"]:focus:invalid {
+  border-bottom: 1px solid rgb(255, 125, 125);
+}
+
+input[type="password"]::placeholder {
+  color: rgba(255, 255, 255, 0.2);
+  font-weight: 100;
+  font-size: 1.2rem;
+}
+
+i.fa-eye {
+  position: absolute;
+  right: 2.4rem;
+  top: 30%;
+  font-size: 1.2rem;
+  color: white;
+  cursor: pointer;
+}
+
+i.fa-eye-slash {
+  position: absolute;
+  right: 0.8rem;
+  top: 30%;
+  font-size: 1.2rem;
+  color: white;
+  cursor: pointer;
+}
+
+button.form-btn {
+  margin: 1.6rem auto;
+  color: rgba(255, 255, 255, 0.9);
+  background-color: #ce671f;
+  border-radius: 0.8rem;
+  border: none;
+  font-weight: 600;
+  font-size: 1.4rem;
+  box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.1);
+  letter-spacing: 0.05rem;
+  transition: all 0.4s ease-in;
+}
+
+button.form-btn:hover {
+  background-color: rgba(210, 105, 30, 0.451);
+}

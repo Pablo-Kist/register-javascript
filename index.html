@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Formulário</title>
+  </head>
+  <body>
+    <section class="container">
+      <form action="#" class="form-register" autocomplete="off">
+        <fieldset>
+          <span class="letter"></span>
+          <legend>Cadastre-se</legend>
+          <h1></h1>
+          <label for="name">Primeiro Nome:</label>
+          <input
+            class="input"
+            type="text"
+            id="name"
+            placeholder="Digite o seu primeiro nome"
+            required
+          />
+          <label for="last-name">Sobrenome:</label>
+          <input
+            class="input"
+            type="text"
+            id="last-name"
+            placeholder="Digite o seu sobrenome"
+            required
+          />
+          <label for="email">E-mail:</label>
+          <input
+            class="input"
+            type="email"
+            id="email"
+            placeholder="Digite o seu e-mail"
+            required
+          />
+          <div class="form-group">
+            <label for="password">Senha:</label>
+            <p><em>Mínimo 6 caracteres.</em></p>
+            <div class="form-password">
+              <input
+                class="input"
+                type="password"
+                id="password"
+                placeholder="Digite uma senha"
+                required
+                maxlength="50"
+                minlength="6"
+              />
+
+              <i class="fa-regular fa-eye-slash"></i>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="confirm-password">Confirme a Senha:</label>
+
+            <div class="form-password">
+              <input
+                class="input"
+                type="password"
+                id="confirm-password"
+                placeholder="Confirme a sua senha"
+                required
+                maxlength="50"
+                minlength="6"
+              />
+
+              <i class="fa-regular fa-eye-slash"></i>
+            </div>
+          </div>
+          <button type="submit" class="form-btn">Cadastrar</button>
+        </fieldset>
+      </form>
+    </section>
+    <script type="text/javascript" src="assets/js/script.js" defer></script>
+  </body>
+</html>
